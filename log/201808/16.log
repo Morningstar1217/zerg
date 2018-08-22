@@ -1,0 +1,116 @@
+[ 2018-08-16T15:50:37+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/by_category?id=3
+[ log ] zdd.cn/api/v1/product/by_category?id=3 [运行时间：0.833438s][吞吐率：1.20req/s] [内存消耗：2,601.28kb] [文件加载：44]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021323s ] mysql:dbname=zerg;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.053139s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` = 3 [ RunTime:0.004025s ]
+
+---------------------------------------------------------------
+[ 2018-08-16T15:50:49+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/2
+[ log ] zdd.cn/api/v1/product/2 [运行时间：0.278987s][吞吐率：3.58req/s] [内存消耗：2,602.73kb] [文件加载：44]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000687s ] mysql:dbname=zerg;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.011418s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` = 2 [ RunTime:0.000378s ]
+
+---------------------------------------------------------------
+[ 2018-08-16T15:51:01+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/2
+[ log ] zdd.cn/api/v1/product/2 [运行时间：0.322347s][吞吐率：3.10req/s] [内存消耗：2,602.73kb] [文件加载：44]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000798s ] mysql:dbname=zerg;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.031525s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` = 2 [ RunTime:0.000362s ]
+
+---------------------------------------------------------------
+[ 2018-08-16T15:52:47+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/by_category?id=3
+[ log ] zdd.cn/api/v1/product/by_category?id=3 [运行时间：0.333095s][吞吐率：3.00req/s] [内存消耗：2,601.29kb] [文件加载：44]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001463s ] mysql:dbname=zerg;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.025726s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` = 3 [ RunTime:0.000783s ]
+
+---------------------------------------------------------------
+[ 2018-08-16T15:52:56+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/recent?count=3
+[ log ] zdd.cn/api/v1/product/recent?count=3 [运行时间：0.319162s][吞吐率：3.13req/s] [内存消耗：2,598.19kb] [文件加载：44]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000907s ] mysql:dbname=zerg;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.034350s ]
+[ sql ] [ SQL ] SELECT * FROM `product` ORDER BY create_time desc LIMIT 3 [ RunTime:0.003622s ]
+
+---------------------------------------------------------------
+[ 2018-08-16T16:12:16+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/recent?count=3
+[ log ] zdd.cn/api/v1/product/recent?count=3 [运行时间：0.274339s][吞吐率：3.65req/s] [内存消耗：2,598.19kb] [文件加载：44]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000709s ] mysql:dbname=zerg;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.010913s ]
+[ sql ] [ SQL ] SELECT * FROM `product` ORDER BY create_time desc LIMIT 3 [ RunTime:0.000474s ]
+
+---------------------------------------------------------------
+[ 2018-08-16T16:12:21+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/2
+[ log ] zdd.cn/api/v1/product/2 [运行时间：0.351367s][吞吐率：2.85req/s] [内存消耗：2,602.82kb] [文件加载：44]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001880s ] mysql:dbname=zerg;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.038450s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` = 2 [ RunTime:0.001047s ]
+
+---------------------------------------------------------------
+[ 2018-08-16T16:12:37+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/2
+[ log ] zdd.cn/api/v1/product/2 [运行时间：0.329601s][吞吐率：3.03req/s] [内存消耗：2,602.82kb] [文件加载：44]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001330s ] mysql:dbname=zerg;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.027531s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` = 2 [ RunTime:0.001141s ]
+
+---------------------------------------------------------------
+[ 2018-08-16T16:12:41+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/6
+[ log ] zdd.cn/api/v1/product/6 [运行时间：0.280485s][吞吐率：3.57req/s] [内存消耗：2,600.26kb] [文件加载：44]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001020s ] mysql:dbname=zerg;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.011338s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` = 6 [ RunTime:0.000493s ]
+
+---------------------------------------------------------------
+[ 2018-08-16T16:12:45+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/20
+[ log ] zdd.cn/api/v1/product/20 [运行时间：0.302423s][吞吐率：3.31req/s] [内存消耗：2,598.05kb] [文件加载：44]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001090s ] mysql:dbname=zerg;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.022350s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` = 20 [ RunTime:0.000877s ]
+
+---------------------------------------------------------------
+[ 2018-08-16T16:12:48+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/15
+[ log ] zdd.cn/api/v1/product/15 [运行时间：0.290396s][吞吐率：3.44req/s] [内存消耗：2,598.05kb] [文件加载：44]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000925s ] mysql:dbname=zerg;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.015562s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` = 15 [ RunTime:0.000456s ]
+
+---------------------------------------------------------------
+[ 2018-08-16T16:12:51+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/10
+[ log ] zdd.cn/api/v1/product/10 [运行时间：0.293603s][吞吐率：3.41req/s] [内存消耗：2,598.05kb] [文件加载：44]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000914s ] mysql:dbname=zerg;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.024710s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` = 10 [ RunTime:0.000725s ]
+
+---------------------------------------------------------------
+[ 2018-08-16T16:12:53+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/5
+[ log ] zdd.cn/api/v1/product/5 [运行时间：0.295279s][吞吐率：3.39req/s] [内存消耗：2,600.75kb] [文件加载：44]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001239s ] mysql:dbname=zerg;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.023104s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` = 5 [ RunTime:0.000836s ]
+
+---------------------------------------------------------------
+[ 2018-08-16T16:14:16+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/2
+[ log ] zdd.cn/api/v1/product/2 [运行时间：0.308626s][吞吐率：3.24req/s] [内存消耗：2,602.82kb] [文件加载：44]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000839s ] mysql:dbname=zerg;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.018048s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` = 2 [ RunTime:0.000697s ]
+
+---------------------------------------------------------------
+[ 2018-08-16T16:18:05+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/2
+[ log ] zdd.cn/api/v1/product/2 [运行时间：10.327717s][吞吐率：0.10req/s] [内存消耗：2,714.33kb] [文件加载：48]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000717s ] mysql:dbname=zerg;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.011150s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000661s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product_image` [ RunTime:0.015402s ]
+[ sql ] [ SQL ] SELECT * FROM `product_image` WHERE  `product_id` = 2 [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product_property` [ RunTime:0.018296s ]
+[ sql ] [ SQL ] SELECT * FROM `product_property` WHERE  `product_id` = 2 [ RunTime:0.000458s ]
+
+---------------------------------------------------------------
+[ 2018-08-16T16:27:16+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/recent?count=3
+[ log ] zdd.cn/api/v1/product/recent?count=3 [运行时间：0.278863s][吞吐率：3.59req/s] [内存消耗：2,598.19kb] [文件加载：44]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000806s ] mysql:dbname=zerg;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.013611s ]
+[ sql ] [ SQL ] SELECT * FROM `product` ORDER BY create_time desc LIMIT 3 [ RunTime:0.000545s ]
+
+---------------------------------------------------------------
