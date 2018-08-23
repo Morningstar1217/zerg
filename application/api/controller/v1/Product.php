@@ -50,6 +50,6 @@ class Product
     //删除商品
     public function deleteOne($id)
     {
-        
+
     }
 }

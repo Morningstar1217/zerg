@@ -3,18 +3,41 @@ namespace app\api\controller\v1;
 
 use app\api\validate\AddressNew;
 use app\api\service\Token as TokenService;
-use \app\api\model\User as UserModel;
+use app\api\model\User as UserModel;
 use app\lib\exception\UserException;
 use app\lib\exception\SuccessMessage;
+use think\Controller;
+use app\lib\enum\ScopeEnum;
+use app\lib\exception\ForbiddenException;
+use app\lib\exception\TokenException;
 
-class Address
+class Address extends Controller
 {
+    //前置方法
+    protected $beforeActionList = [
+        'checkPrimaryScope' => ['only' => 'createOrUpdateAddress']
+    ];
+
+    protected function checkPrimaryScope()
+    {
+        $scope = TokenService::getCurrentTokenVar('scope');
+        if ($scope) {
+            if ($scope >= ScopeEnum::User) {
+                return true;
+            } else {
+                throw new ForbiddenException();
+            }
+        } else {
+            throw new TokenException();
+        }
+    }
+
     //增加或修改地址
     public function createOrUpdateAddress()
     {
         $validate = new AddressNew();
         $validate->goCheck();
-        
+
         /**
          *  根据Token来获取uid
          * ->根据uid来查找用户数据，判断用户是否存在，如果不存在抛出异常
