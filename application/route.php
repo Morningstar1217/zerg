@@ -42,3 +42,6 @@ Route::get('api/:version/category/all', 'api/:version.Category/getAllCategories'
 Route::post('api/:version/token/user', 'api/:version.Token/getToken');
 //获取地址
 Route::post('api/:version/address', 'api/:version.Address/createOrUpdateAddress');
+
+//订单路由
+Route::post('api/:version/order', 'api/:version.Order/placrOrder');
