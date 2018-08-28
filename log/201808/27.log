@@ -1,0 +1,7 @@
+[ 2018-08-27T11:25:04+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/by_category?id=3
+[ log ] zdd.cn/api/v1/product/by_category?id=3 [运行时间：0.146147s][吞吐率：6.84req/s] [内存消耗：3,616.92kb] [文件加载：44]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007671s ] mysql:dbname=zerg;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.037090s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `category_id` = 3 [ RunTime:0.007085s ]
+
+---------------------------------------------------------------
