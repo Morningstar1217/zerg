@@ -7,6 +7,7 @@ use app\api\model\userAddress;
 use app\lib\exception\UserException;
 use app\api\model\OrderProduct;
 use think\Exception;
+use think\Db;
 
 
 class Order
@@ -20,7 +21,7 @@ class Order
 
     public function place($uid, $oProducts)
     {
-    //oProducts和products做对比
+        //oProducts和products做对比
         $this->oProducts = $oProducts;
         $this->$this->getProductsByOrder($oProducts);
         $this->uid = $uid;
@@ -31,10 +32,14 @@ class Order
         }
         //开始创建订单
         $orderSnap = $this->snapOrder($status);
+        $order = $this->createOrder($orderSnap);
+        $order['pass'] = true;
+        return $status;
     }
     //生成订单
     private function createOrder($snap)
     {
+        Db::startTrans();
         try {
             $orderNo = $this->makeOrderNo();
             $order = new \app\api\model\Order();
@@ -57,12 +62,16 @@ class Order
             }
             $orderProduct = new OrderProduct();
             $orderProduct->saveAll($this->oProducts);
+
+            Db::commit();
+
             return [
                 'order_no' => $orderNo,
                 'order_id' => $orderID,
                 'create_time' => $create_time
             ];
         } catch (Exception $ex) {
+            Db::rollback();
             throw $ex;
         }
     }

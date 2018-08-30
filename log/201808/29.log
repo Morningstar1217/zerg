@@ -1,0 +1,13 @@
+[ 2018-08-29T13:54:26+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v1/product/11
+[ log ] zdd.cn/api/v1/product/11 [运行时间：0.165723s][吞吐率：6.03req/s] [内存消耗：3,918.16kb] [文件加载：51]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006552s ] mysql:dbname=zerg;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.035031s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.007613s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product_image` [ RunTime:0.005878s ]
+[ sql ] [ SQL ] SELECT * FROM `product_image` WHERE  `product_id` = 11 ORDER BY `order`  asc [ RunTime:0.002073s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `image` [ RunTime:0.007069s ]
+[ sql ] [ SQL ] SELECT * FROM `image` WHERE  `id` IN (19,20,21,22,23,24,25,26,27,29,28,62,63) [ RunTime:0.002936s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product_property` [ RunTime:0.005672s ]
+[ sql ] [ SQL ] SELECT * FROM `product_property` WHERE  `product_id` = 11 [ RunTime:0.000781s ]
+
+---------------------------------------------------------------

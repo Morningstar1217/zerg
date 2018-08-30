@@ -8,6 +8,7 @@ use app\lib\exception\ForbiddenException;
 use app\lib\enum\ScopeEnum;
 use app\api\controller\BaseController;
 use app\api\validate\OrderPlace;
+use app\api\service\Order as OrderService;
 
 class Order extends BaseController
 {
@@ -30,5 +31,9 @@ class Order extends BaseController
         (new OrderPlace())->goCheck();
         $products = input('post.products/a');
         $uid = TokenService::getCurrentUid();
+
+        $order = new OrderService();
+        $status = $order->place($uid, $products);
+        return $status;
     }
 }
