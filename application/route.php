@@ -45,3 +45,5 @@ Route::post('api/:version/address', 'api/:version.Address/createOrUpdateAddress'
 
 //订单路由
 Route::post('api/:version/order', 'api/:version.Order/placrOrder');
+//支付路由
+Route::post('api/:version/pay/pre_order', 'api/:version.Pay/getPreOrder');
